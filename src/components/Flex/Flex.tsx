@@ -7,6 +7,7 @@ const FlexContainer = styled.div`
     align-items: ${(props: IProps) => props.alignItems ? props.alignItems : 'center'};
     width: 100%;
     flex-direction: ${(props: IProps) => props.flexDirection ? props.flexDirection : 'row'};
+    flex-wrap: ${(props: IProps) => props.wrap ? props.wrap : 'no-wrap'};
 `;
 
 interface IProps {
@@ -15,11 +16,12 @@ interface IProps {
     alignItems?: string;
     flexDirection?: string;
     role?: string;
+    wrap?: string;
 }
 
 export function Flex(props: IProps) {
     return (
-        <FlexContainer justifyContent={props.justifyContent} alignItems={props.alignItems} role={props.role} >
+        <FlexContainer justifyContent={props.justifyContent} alignItems={props.alignItems} role={props.role} wrap={props.wrap}>
             {props.children}
         </FlexContainer>
     );

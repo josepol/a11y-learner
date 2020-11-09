@@ -22,6 +22,6 @@ interface IProps {
 
 export function AnimationMovement(props: IProps) {
     return (
-        <AnimationMove>{props.children}</AnimationMove>
+        <AnimationMove up={props.up} time={props.time}>{props.children}</AnimationMove>
     );
 }

@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { Home } from './pages/home/Home';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { Theory } from './pages/theory/Theory';
 
 export function Router() {
     return (
         <BrowserRouter>
-            <Route path="" exact component={Home}></Route>
+            <Route path="*"><Redirect to='/theory' /></Route>
+            <Route path="/theory" component={Theory}></Route>
         </BrowserRouter>
     );
 }

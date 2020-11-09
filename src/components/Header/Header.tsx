@@ -45,7 +45,7 @@ export function Header() {
         <React.Fragment>
             <Nav>
                 <Flex>
-                    <LinkNav to="/">Learn <AlternativeColor>a11y</AlternativeColor></LinkNav>
+                    <LinkNav to="/theory">Learn <AlternativeColor>a11y</AlternativeColor></LinkNav>
                     <Desktop>
                         <Flex justifyContent='flex-end'>
                             <LinkNav to="/" minWidth={120}>Theory</LinkNav>
