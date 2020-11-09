@@ -17,6 +17,9 @@ const BoxContainer = styled.div`
     color: ${({ theme }) => theme.fontColor};
     font-weight: bold;
     box-shadow: 0 3px 6px rgba(0,0,0,0.01), 0 3px 6px rgba(0,0,0,0.02);
+    &:hover {
+        color: ${({ theme }) => theme.primaryColor};
+    }
 `;
 
 export function Box(props: IProps) {
