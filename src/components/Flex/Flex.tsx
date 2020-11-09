@@ -14,11 +14,12 @@ interface IProps {
     justifyContent?: string;
     alignItems?: string;
     flexDirection?: string;
+    role?: string;
 }
 
 export function Flex(props: IProps) {
     return (
-        <FlexContainer justifyContent={props.justifyContent} alignItems={props.alignItems} >
+        <FlexContainer justifyContent={props.justifyContent} alignItems={props.alignItems} role={props.role} >
             {props.children}
         </FlexContainer>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { AnimationMoveTop } from '../AnimationMoveTop/AnimationMoveTop';
+import { AnimationMovement } from '../AnimationMovement/AnimationMovement';
 
 const Btn = styled.button`
     padding: 10px 20px;
@@ -34,15 +34,17 @@ interface IProps {
     btnText?: string;
     icon?: IconProp;
     onClick: Function;
+    ariaLabel?: string;
 }
 
 export function Button(props: IProps) {
     return (
-        <AnimationMoveTop time={0.3} up={2}>
-            <Btn onClick={(event: React.MouseEvent) => props.onClick(event)}>
+        <AnimationMovement time={0.3} up={2}>
+            <Btn onClick={(event: React.MouseEvent) => props.onClick(event)}
+                aria-label={props.ariaLabel ? props.ariaLabel : props.btnText}>
                 {props.icon && <Icon icon={props.icon} />}
                 {props.btnText && <span>{props.btnText}</span>}
             </Btn>
-        </AnimationMoveTop>
+        </AnimationMovement>
     );
 }

@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import styled from 'styled-components';
 import { Button } from '../Button/Button';
 import { faSignInAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 import { Flex } from '../Flex/Flex';
 import { LinkNav } from '../Link/Link';
-import { Menu } from '../Menu/Menu';
+
+const Menu = React.lazy(() => import('../Menu/Menu'));
 
 const Nav = styled.nav`
     background-color: ${({ theme }) => theme.backgroundWhite};
@@ -40,11 +41,6 @@ export function Header() {
 
     const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 
-    const mobileMenuClicked = () => {
-        setIsMobileMenuOpened(!isMobileMenuOpened);
-        console.log(isMobileMenuOpened);
-    }
-
     return (
         <React.Fragment>
             <Nav>
@@ -53,15 +49,17 @@ export function Header() {
                     <Desktop>
                         <Flex justifyContent='flex-end'>
                             <LinkNav to="/" minWidth={120}>Theory</LinkNav>
-                            <LinkNav to="/">Examples</LinkNav>
-                            <LinkNav to="/">Exercises</LinkNav>
+                            <LinkNav to="/examples">Examples</LinkNav>
+                            <LinkNav to="/exercises">Exercises</LinkNav>
                             <Button btnText="Log In" icon={faSignInAlt} onClick={() => {}} />
                         </Flex>
                     </Desktop>
                     <Mobile>
                         <Flex>
-                            <Button icon={faBars} onClick={mobileMenuClicked} />
-                            {isMobileMenuOpened && <Menu />}
+                            <Button icon={faBars} onClick={() => setIsMobileMenuOpened(!isMobileMenuOpened)} ariaLabel="Menu"/>
+                            <Suspense fallback={<></>}>
+                                {isMobileMenuOpened && <Menu />}
+                            </Suspense>
                         </Flex>
                     </Mobile>
                 </Flex>

@@ -22,6 +22,7 @@ declare module 'styled-components' {
         fontColorAlternative: string;
         fontSizeRegular: string;
         fontSizeTitle: string;
+        fontSizeTitleH1: string;
         fontSizeSmall: string;
         backgroundWhite: string;
         spaces: Array<string>;
@@ -66,6 +67,7 @@ export const generalTheme = {
     fontColorAlternative: '#374046',
     fontSizeRegular: '16px',
     fontSizeTitle: '21px',
+    fontSizeTitleH1: '32px',
     fontSizeSmall: '13px',
     backgroundWhite: 'white',
     backgroundWhiteDark: '#FAFAFA',

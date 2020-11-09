@@ -20,7 +20,7 @@ interface IProps {
     up?: number;
 }
 
-export function AnimationMoveTop(props: IProps) {
+export function AnimationMovement(props: IProps) {
     return (
         <AnimationMove>{props.children}</AnimationMove>
     );

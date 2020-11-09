@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import { AnimationMoveTop } from '../AnimationMoveTop/AnimationMoveTop';
+import { AnimationMovement } from '../AnimationMovement/AnimationMovement';
 
 const LinkContainer = styled(NavLink)`
     font-size: ${({ theme }) => theme.fontSizeTitle};
@@ -10,6 +10,9 @@ const LinkContainer = styled(NavLink)`
     margin-right: ${({ theme }) => theme.spaces[1]};
     text-align: center;
     &:hover {
+        color: ${({ theme }) => theme.primaryColor};
+    }
+    &.selected {
         color: ${({ theme }) => theme.primaryColor};
     }
 `;
@@ -32,9 +35,9 @@ interface IAnimationProps {
 export function LinkNav(props: IProps) {
     return (
         <MinWidthContainer>
-            <AnimationMoveTop>
-                <LinkContainer to={props.to}>{props.children}</LinkContainer>
-            </AnimationMoveTop>
+            <AnimationMovement>
+                <LinkContainer activeClassName="selected" to={props.to}>{props.children}</LinkContainer>
+            </AnimationMovement>
         </MinWidthContainer>
     );
 }
