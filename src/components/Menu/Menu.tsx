@@ -21,7 +21,7 @@ export function Menu() {
                 <MenuContainer><LinkNav to="/" minWidth={120}>Theory</LinkNav>
                 <LinkNav to="/">Examples</LinkNav>
                 <LinkNav to="/">Exercises</LinkNav>
-                <Button btnText="Log In" icon={faSignInAlt} /></MenuContainer>
+                <Button btnText="Log In" icon={faSignInAlt} onClick={() => {}} /></MenuContainer>
             </Flex>
     );
 }

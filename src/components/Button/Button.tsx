@@ -33,12 +33,13 @@ const Icon = styled(FontAwesomeIcon)`
 interface IProps {
     btnText?: string;
     icon?: IconProp;
+    onClick: Function;
 }
 
 export function Button(props: IProps) {
     return (
         <AnimationMoveTop time={0.3} up={2}>
-            <Btn>
+            <Btn onClick={(event: React.MouseEvent) => props.onClick(event)}>
                 {props.icon && <Icon icon={props.icon} />}
                 {props.btnText && <span>{props.btnText}</span>}
             </Btn>

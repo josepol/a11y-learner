@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Button } from '../Button/Button';
 import { faSignInAlt, faBars } from '@fortawesome/free-solid-svg-icons';
@@ -37,6 +37,14 @@ const Mobile = styled.div`
 `;
 
 export function Header() {
+
+    const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
+
+    const mobileMenuClicked = () => {
+        setIsMobileMenuOpened(!isMobileMenuOpened);
+        console.log(isMobileMenuOpened);
+    }
+
     return (
         <React.Fragment>
             <Nav>
@@ -47,13 +55,13 @@ export function Header() {
                             <LinkNav to="/" minWidth={120}>Theory</LinkNav>
                             <LinkNav to="/">Examples</LinkNav>
                             <LinkNav to="/">Exercises</LinkNav>
-                            <Button btnText="Log In" icon={faSignInAlt} />
+                            <Button btnText="Log In" icon={faSignInAlt} onClick={() => {}} />
                         </Flex>
                     </Desktop>
                     <Mobile>
                         <Flex>
-                            <Button icon={faBars} />
-                            <Menu />
+                            <Button icon={faBars} onClick={mobileMenuClicked} />
+                            {isMobileMenuOpened && <Menu />}
                         </Flex>
                     </Mobile>
                 </Flex>
