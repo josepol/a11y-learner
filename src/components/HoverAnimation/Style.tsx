@@ -1,5 +1,5 @@
-import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import { IProps } from '.';
 
 const rotate = (up: number) => keyframes`
   to {
@@ -7,21 +7,9 @@ const rotate = (up: number) => keyframes`
   }
 `;
 
-const AnimationMove = styled.div`
+export const HoverAnimationStyle = styled.div`
     &:hover {
         animation: ${(props: IProps) => rotate(props.up ? props.up : 2)}
         ${(props: IProps) => props.time ? props.time : 0.3}s ease 1 forwards;
     }
 `;
-
-interface IProps {
-    children: any;
-    time?: number;
-    up?: number;
-}
-
-export function AnimationMovement(props: IProps) {
-    return (
-        <AnimationMove up={props.up} time={props.time}>{props.children}</AnimationMove>
-    );
-}

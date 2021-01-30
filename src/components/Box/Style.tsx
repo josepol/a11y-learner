@@ -1,11 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-interface IProps {
-    children: any;
-}
-
-const BoxContainer = styled.div`
+export const BoxStyle = styled.div`
     width: 200px;
     height: 80px;
     border-radius: 20px;
@@ -21,9 +16,3 @@ const BoxContainer = styled.div`
         color: ${({ theme }) => theme.primaryColor};
     }
 `;
-
-export function Box(props: IProps) {
-    return (
-        <BoxContainer>{props.children}</BoxContainer>
-    );
-}
