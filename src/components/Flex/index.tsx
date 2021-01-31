@@ -12,15 +12,15 @@ export interface IProps {
 }
 
 export function Flex(props: IProps) {
-    return (
-        <FlexStyle
-            justifyContent={props.justifyContent}
-            alignItems={props.alignItems}
-            role={props.role}
-            wrap={props.wrap}
-            flexDirection={props.flexDirection}
-        >
-            {props.children}
-        </FlexStyle>
-    );
+  return (
+    <FlexStyle
+      justifyContent={props.justifyContent}
+      alignItems={props.alignItems}
+      role={props.role}
+      wrap={props.wrap}
+      flexDirection={props.flexDirection}
+    >
+      {props.children}
+    </FlexStyle>
+  );
 }

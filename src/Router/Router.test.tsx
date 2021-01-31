@@ -2,22 +2,22 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Router } from './index';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
-import { Home } from 'containers/Home';
+import { Home } from '../containers/Home';
 
 describe('<Router />', () => {
   it('renders browser router and routes', () => {
     const wrapper = shallow(<Router />);
-    const pathMap = wrapper.find(Route).reduce((pathMap, route) => {
-      const routeProps = route.props() as any;
+    const pathMap = wrapper.find(Route).reduce((pathMap: any, route: any) => {
+      const routeProps = route.props();
       if (routeProps.path === '*') {
-        (pathMap as any)[routeProps.path] = routeProps.children;
+        pathMap[routeProps.path] = routeProps.children;
       } else {
-        (pathMap as any)[routeProps.path] = routeProps.component;
+        pathMap[routeProps.path] = routeProps.component;
       }
       return pathMap;
     }, {});
     expect(wrapper.find(BrowserRouter)).toHaveLength(1);
-    expect((pathMap as any)['/home']).toBe(Home);
-    expect((pathMap as any)['*']).toStrictEqual(<Redirect to="/home" />);
+    expect(pathMap['/home']).toBe(Home);
+    expect(pathMap['*']).toStrictEqual(<Redirect to="/home" />);
   });
 });

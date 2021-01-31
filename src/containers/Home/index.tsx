@@ -1,12 +1,12 @@
-import React, { Fragment } from "react";
-import { Header } from "../../components/Header";
-import { Main } from "../../components/Main";
-import { HoverAnimation } from "../../components/HoverAnimation";
-import { Heading } from "../../components/Heading";
-import { Box } from "../../components/Box";
-import { Flex } from "../../components/Flex";
-import { Link } from "../../components/Link";
-import { HomeStyle } from "./Style";
+import React, { Fragment } from 'react';
+import { Header } from '../../components/Header';
+import { Main } from '../../components/Main';
+import { HoverAnimation } from '../../components/HoverAnimation';
+import { Heading } from '../../components/Heading';
+import { Box } from '../../components/Box';
+import { Flex } from '../../components/Flex';
+import { Link } from '../../components/Link';
+import { HomeStyle } from './Style';
 
 export function Home() {
   return (

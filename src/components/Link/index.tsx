@@ -9,11 +9,11 @@ export interface IProps {
 }
 
 export function Link(props: IProps) {
-    return (
-        <LinkStyle>
-            <HoverAnimation>
-                <NavLinkStyle activeClassName="selected" to={props.to}>{props.children}</NavLinkStyle>
-            </HoverAnimation>
-        </LinkStyle>
-    );
+  return (
+    <LinkStyle>
+      <HoverAnimation>
+        <NavLinkStyle activeClassName="selected" to={props.to}>{props.children}</NavLinkStyle>
+      </HoverAnimation>
+    </LinkStyle>
+  );
 }

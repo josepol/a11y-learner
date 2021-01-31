@@ -7,10 +7,10 @@ interface IProps {
 }
 
 export function Input(props: IProps) {
-    return (
-        <Flex justifyContent='center' flexDirection='column'>
-            <InputLabelStyle>{props.labelText}</InputLabelStyle>
-            <InputElementStyle></InputElementStyle>
-        </Flex>
-    );
+  return (
+    <Flex justifyContent='center' flexDirection='column'>
+      <InputLabelStyle>{props.labelText}</InputLabelStyle>
+      <InputElementStyle></InputElementStyle>
+    </Flex>
+  );
 }

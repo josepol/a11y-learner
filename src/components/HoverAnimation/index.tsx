@@ -8,7 +8,7 @@ export interface IProps {
 }
 
 export function HoverAnimation(props: IProps) {
-    return (
-        <HoverAnimationStyle up={props.up} time={props.time}>{props.children}</HoverAnimationStyle>
-    );
+  return (
+    <HoverAnimationStyle up={props.up} time={props.time}>{props.children}</HoverAnimationStyle>
+  );
 }
