@@ -1,9 +1,9 @@
 import React from 'react';
 import './Normalize.css';
 import './App.css';
-import { Router } from './Router';
+import { Router } from 'Router';
 import { ThemeProvider } from 'styled-components';
-import { regularTheme } from './Theme';
+import { regularTheme } from 'Theme';
 
 function App() {
   return (

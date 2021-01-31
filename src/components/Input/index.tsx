@@ -1,6 +1,6 @@
 import React from 'react';
-import { Flex } from '../Flex';
 import { InputLabelStyle, InputElementStyle } from './Style';
+import { Flex } from 'components/Flex';
 
 interface IProps {
     labelText?: string;

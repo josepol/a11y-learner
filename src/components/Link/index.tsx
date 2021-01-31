@@ -1,6 +1,6 @@
 import React from 'react';
-import { HoverAnimation } from '../HoverAnimation';
 import { NavLinkStyle, LinkStyle } from './Style';
+import { HoverAnimation } from 'components/HoverAnimation';
 
 export interface IProps {
     children: any;

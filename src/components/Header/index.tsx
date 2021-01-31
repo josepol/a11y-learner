@@ -1,11 +1,11 @@
 import React, { useState, Suspense } from 'react';
-import { Button } from '../Button';
 import { faSignInAlt, faBars } from '@fortawesome/free-solid-svg-icons';
-import { Flex } from '../Flex';
-import { Link } from '../Link';
-import { Modal } from '../Modal';
-import { Login } from '../../containers/Login';
 import { NavStyle, DesktopStyle, AlternativeColorStyle, MobileStyle } from './Style';
+import { Modal } from 'components/Modal';
+import { Login } from 'containers/Login';
+import { Flex } from 'components/Flex';
+import { Link } from 'components/Link';
+import { Button } from 'components/Button';
 
 const Menu = React.lazy(() => import('../Menu'));
 

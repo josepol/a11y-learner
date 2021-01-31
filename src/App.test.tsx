@@ -1,10 +1,10 @@
 import React from 'react';
-import App from './App';
+import App from 'App';
 import * as ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
-import { Router } from './Router';
-import { regularTheme } from './Theme';
+import { Router } from 'Router';
+import { regularTheme } from 'Theme';
 
 describe('<App />', () => {
   it('renders without crashing', () => {

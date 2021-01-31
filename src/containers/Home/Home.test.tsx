@@ -4,12 +4,12 @@ import { Home } from '.';
 import { Header } from 'components/Header';
 import { Main } from 'components/Main';
 import { Heading } from 'components/Heading';
-import { HomeStyle } from './Style';
 import { Flex } from 'components/Flex';
 import { HoverAnimation } from 'components/HoverAnimation';
 import { Link } from 'components/Link';
 import { Box } from 'components/Box';
 import { ShallowWrapper } from 'enzyme';
+import { HomeStyle } from './Style';
 import { cleanup } from '@testing-library/react';
 import 'jest-styled-components';
 

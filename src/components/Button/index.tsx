@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { HoverAnimation } from '../HoverAnimation';
 import { ButtonStyle, IconStyle } from './Style';
+import { HoverAnimation } from 'components/HoverAnimation';
 
 interface IProps {
     btnText?: string;

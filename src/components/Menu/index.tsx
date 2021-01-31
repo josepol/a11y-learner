@@ -1,9 +1,9 @@
 import React from 'react';
-import { Flex } from '../Flex';
-import { Link } from '../Link';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
-import { Button } from '../Button';
 import { MenuStyle } from './Style';
+import { Flex } from 'components/Flex';
+import { Link } from 'components/Link';
+import { Button } from 'components/Button';
 
 export default function Menu() {
 
