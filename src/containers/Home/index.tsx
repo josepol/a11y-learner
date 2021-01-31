@@ -20,7 +20,7 @@ export function Home() {
 <HoverAnimation up={6}><Link to="/theory/html"><Box>Chat</Box></Link></HoverAnimation>
 <HoverAnimation up={6}><Link to="/theory/css-javascript"><Box>Cook receipts</Box></Link></HoverAnimation>
 </Flex>
-</HomeStyle>
+</HomeStyle> 
 </Main>
 </Fragment>
     );
