@@ -7,11 +7,9 @@ import { regularTheme } from './Theme';
 
 function App() {
   return (
-    <div>
-      <ThemeProvider theme={regularTheme}>
-        <Router />
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={regularTheme} data-testid="theme-provider">
+      <Router />
+    </ThemeProvider>
   );
 }
 

@@ -8,7 +8,7 @@ import './Login.css';
 export function Login() {
     return (
         <Flex className='heigh-100' flexDirection="column" justifyContent="space-evenly">
-            <Input labelText={'Username'}></Input>
+            <Input labelText='Username'></Input>
             <Button btnText="Log In" icon={faSignInAlt} onClick={() => {}} />
         </Flex>
     );
