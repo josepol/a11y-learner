@@ -10,18 +10,18 @@ import { HomeStyle } from './Style';
 
 export function Home() {
     return (
-        <Fragment>
-            <Header></Header>
-            <Main>
-                <Heading text="Apps" />
-                <HomeStyle>
-                    <Flex justifyContent="space-around" wrap="wrap">
-                        <HoverAnimation up={6}><Link to="/theory/basic"><Box>Shop List</Box></Link></HoverAnimation>
-                        <HoverAnimation up={6}><Link to="/theory/html"><Box>Chat</Box></Link></HoverAnimation>
-                        <HoverAnimation up={6}><Link to="/theory/css-javascript"><Box>Cook receipts</Box></Link></HoverAnimation>
-                    </Flex>
-                </HomeStyle>
-            </Main>
-        </Fragment>
+<Fragment>
+<Header></Header>
+<Main>
+<Heading text="Apps" />
+<HomeStyle>
+<Flex justifyContent="space-around" wrap="wrap">
+<HoverAnimation up={6}><Link to="/theory/basic"><Box>Shop List</Box></Link></HoverAnimation>
+<HoverAnimation up={6}><Link to="/theory/html"><Box>Chat</Box></Link></HoverAnimation>
+<HoverAnimation up={6}><Link to="/theory/css-javascript"><Box>Cook receipts</Box></Link></HoverAnimation>
+</Flex>
+</HomeStyle>
+</Main>
+</Fragment>
     );
 }
