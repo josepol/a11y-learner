@@ -23,12 +23,12 @@ export function Header() {
             <DesktopStyle>
               <Flex justifyContent='flex-end'>
                 <Link to="/" minWidth={120}>Apps</Link>
-                <Button icon={faSignInAlt} onClick={() => setIsModalOpen(!isModalOpen)} ariaLabel="open login dialog"/>
+                <Button primary={true} icon={faSignInAlt} onClick={() => setIsModalOpen(!isModalOpen)} ariaLabel="open login dialog"/>
               </Flex>
             </DesktopStyle>
             <MobileStyle>
               <Flex>
-                <Button icon={faBars} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} ariaLabel="open menu dialog"/>
+                <Button primary={true} icon={faBars} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} ariaLabel="open menu dialog"/>
                 <Suspense fallback={null}>
                   {isMobileMenuOpen && <Menu />}
                 </Suspense>
