@@ -18,7 +18,6 @@ export const FirstStory = Template.bind({});
 
 FirstStory.args = {
   primary: true,
-  btnText: 'test',
-  onClick: () => { },
-  ariaLabel: 'test',
+  btnText: 'Log in',
+  ariaLabel: 'Log in',
 };
