@@ -70,7 +70,7 @@ export const generalTheme = {
     fontSizeTitleH1: '32px',
     fontSizeSmall: '13px',
     backgroundWhite: 'white',
-    backgroundWhiteDark: '#FAFAFA',
+    backgroundWhiteDark: '#000000',
     spaces,
     breakPoints
 }
@@ -78,8 +78,8 @@ export const generalTheme = {
 export const regularTheme: DefaultTheme = {
     primaryColor: '#1976d2',
     primaryColorDark: '#125ca6',
-    secondaryColor: '#cfd8dc',
-    secondaryColorDark: '#b4bcc0',
+    secondaryColor: '#AAAAAA',
+    secondaryColorDark: '#707070',
     ...generalTheme
 };
 

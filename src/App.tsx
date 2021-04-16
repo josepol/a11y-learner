@@ -1,16 +1,15 @@
 import React from 'react';
+import './Normalize.css';
 import './App.css';
-import { Router } from './Router';
+import { Router } from 'Router';
 import { ThemeProvider } from 'styled-components';
-import { regularTheme } from './Theme';
+import { regularTheme } from 'Theme';
 
 function App() {
   return (
-    <div>
-      <ThemeProvider theme={regularTheme}>
-        <Router />
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={regularTheme} data-testid="theme-provider">
+      <Router />
+    </ThemeProvider>
   );
 }
 

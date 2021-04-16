@@ -1,0 +1,9 @@
+/**/*.d.ts
+/src/stories/**
+/src/Theme.tsx
+/src/serviceWorker.ts
+/config/**
+/coverage/**
+/node_modules/**
+/scripts/**
+/public/**
