@@ -24,7 +24,7 @@ export function Theory() {
                         <AnimationMovement up={6}><LinkNav to="/theory/basic"><Box>Basic concepts</Box></LinkNav></AnimationMovement>
                         <AnimationMovement up={6}><LinkNav to="/theory/html"><Box>HTML</Box></LinkNav></AnimationMovement>
                         <AnimationMovement up={6}><LinkNav to="/theory/css-javascript"><Box>CSS & JavaScript</Box></LinkNav></AnimationMovement>
-                        <AnimationMovement up={6}><LinkNav to="/theory/aria"><Box>ARIA Labels</Box></LinkNav></AnimationMovement>
+                        <AnimationMovement up={6}><LinkNav to="/theory/aria"><Box>ARIA</Box></LinkNav></AnimationMovement>
                         <AnimationMovement up={6}><LinkNav to="/theory/advance"><Box>Advance</Box></LinkNav></AnimationMovement>
                         <AnimationMovement up={6}><LinkNav to="/theory/plugins"><Box>Plugins</Box></LinkNav></AnimationMovement>
                     </Flex>
